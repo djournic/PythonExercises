@@ -1,0 +1,39 @@
+#This is a simple exercise in object inheritance
+#So I create a class called Pets
+
+class Pets():
+    animals =[]
+    def __init__(self, animals):
+        self.animals = animals
+    def walk(self):
+        for animal in self.animals:
+            print(animal.walk())
+
+class Dog():
+    is_cute = True
+
+    def __init__(self, name, age):
+        self.name = name
+        self. age = age
+    def walk (self):
+        return f'{self.name} is excited to go for a walk'
+
+#Next create another class of Dogs
+
+class Fido(Dog):
+    def bark(self, barks):
+        return f'{barks}'
+
+class Rover(Dog):
+    def bark(self, barks):
+        return f'{barks}'
+    
+class Ryder(Dog):
+    def bark(self, barks):
+        return f'{barks}'
+my_dogs = [Fido('Fido', 3), Rover('Rover', 6), Ryder('Ryder', 11)]    
+
+my_pets = Pets(my_dogs)
+
+my_pets.walk()
+    
